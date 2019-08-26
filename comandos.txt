@@ -22,7 +22,7 @@ yarn sequelize migration:create --name=create-users
 yarn sequelize db:migrate
 
 
-yarn add bcrypt
+yarn add bcryptjs
 
 yarn add jsonwebtoken
 
