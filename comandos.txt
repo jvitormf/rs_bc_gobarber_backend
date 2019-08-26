@@ -23,3 +23,6 @@ yarn sequelize db:migrate
 
 
 yarn add bcrypt
+
+yarn add jsonwebtoken
+
