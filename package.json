@@ -5,9 +5,13 @@
   "repository": "https://github.com/jvitormf/bootcamp_gobarber.git",
   "author": "johnny <j.vitor.mf@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
   "dependencies": {
     "eslint": "^6.2.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sequelize": "^5.16.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.1.0",
