@@ -18,6 +18,8 @@ routes.use(authMiddleware);
 
 routes.put('/users', UserController.update);
 
-routes.post('./files', upload.single('file'), (req, res) => res.json({ ok: true }));
+routes.post('./files', upload.single('file'), (req, res) =>
+    res.json({ ok: true })
+);
 
 export default routes;
