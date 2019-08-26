@@ -1,18 +1,34 @@
+//inicia projeto
 yarn init -y
+
+//adiciona express
 yarn add express
+
+//adiciona sucrase e nodemon
 yarn add sucrase nodemon -D
 
+//adiciona eslint
 yarn add eslint
+
+//configura eslint
 yarn eslint --init
+
+//instala pacotes
 yarn
+
+//adiciona prettier eslint-config e eslint pluglin
 yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 
+//aplica formatacao
 yarn eslint --fix src --ext .js
 
+//adiciona sequelize
 yarn add sequelize
+
+//adiciona sequelize-cli
 yarn add sequelize-cli -D
 
-
+//adiciona pg pg-hstore
 yarn add pg pg-hstore
 
 //criar migration
@@ -21,8 +37,11 @@ yarn sequelize migration:create --name=create-users
 //criar tabela banco
 yarn sequelize db:migrate
 
-
+//adiciona bcryptjs
 yarn add bcryptjs
 
+//adiciona jsonwebtoken
 yarn add jsonwebtoken
 
+//adiciona multer
+yarn add multer
