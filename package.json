@@ -6,6 +6,7 @@
   "author": "johnny <j.vitor.mf@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "eslint": "^6.2.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
