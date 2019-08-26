@@ -1,0 +1,22 @@
+yarn init -y
+yarn add express
+yarn add sucrase nodemon -D
+
+yarn add eslint
+yarn eslint --init
+yarn
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+yarn eslint --fix src --ext .js
+
+yarn add sequelize
+yarn add sequelize-cli -D
+
+
+yarn add pg pg-hstore
+
+//criar migration
+yarn sequelize migration:create --name=create-users
+
+//criar tabela banco
+yarn sequelize db:migrate
