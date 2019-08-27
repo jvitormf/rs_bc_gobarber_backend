@@ -45,3 +45,7 @@ yarn add jsonwebtoken
 
 //adiciona multer
 yarn add multer
+
+
+//adiciona biblioteca para data
+yarn add date-fns@next
