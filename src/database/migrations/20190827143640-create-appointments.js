@@ -9,13 +9,13 @@ module.exports = {
             },
 
             date: {
-                type: Sequelize.STRING,
+                type: Sequelize.DATE,
                 allowNull: false,
             },
 
             user_id: {
                 type: Sequelize.INTEGER,
-                references: { model: 'files', key: 'id' },
+                references: { model: 'users', key: 'id' },
                 onUpdate: 'CASCADE',
                 onDelete: 'SET NULL',
                 allowNull: true,
@@ -23,7 +23,7 @@ module.exports = {
 
             provider_id: {
                 type: Sequelize.INTEGER,
-                references: { model: 'files', key: 'id' },
+                references: { model: 'users', key: 'id' },
                 onUpdate: 'CASCADE',
                 onDelete: 'SET NULL',
                 allowNull: true,
@@ -31,6 +31,7 @@ module.exports = {
 
             canceled_at: {
                 type: Sequelize.DATE,
+                allowNull: true,
             },
 
             created_at: {
