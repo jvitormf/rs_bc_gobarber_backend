@@ -49,3 +49,7 @@ yarn add multer
 
 //adiciona biblioteca para data
 yarn add date-fns@next
+
+
+//adiciona gerenciado mongodb
+yarn add mongoose
