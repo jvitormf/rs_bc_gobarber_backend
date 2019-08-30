@@ -57,3 +57,6 @@ yarn add mongoose
 
 //adiciona envio de email
 yarn add nodemailer
+
+// gerenciar de template de emails
+yarn add express-handlebars nodemailer-express-handlebars
