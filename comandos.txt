@@ -53,3 +53,7 @@ yarn add date-fns@next
 
 //adiciona gerenciado mongodb
 yarn add mongoose
+
+
+//adiciona envio de email
+yarn add nodemailer
