@@ -58,6 +58,12 @@ class AppointmentController {
             });
         }
 
+        if(!(provider_id === userId)){
+            return res.status(400).json({
+                eroor: 'You can not create an appointment to your own provider account.'
+            })
+        }
+
         const hourStart = startOfHour(parseISO(date));
 
         if (isBefore(hourStart, new Date())) {
@@ -110,6 +116,11 @@ class AppointmentController {
                     as: 'provider',
                     attributes: ['name', 'email'],
                 },
+                {
+                    model: User,
+                    as: 'user',
+                    attributes: ['name'],
+                }
             ],
         });
 
@@ -135,7 +146,16 @@ class AppointmentController {
         await Mail.sendMail({
             to: `${appointment.provider.name} <${appointment.provider.email}>`,
             subject: 'Appointment canceled.',
-            text: 'Your appointment was canceled.',
+            template: 'cancellation',
+            context: {
+                provider: appointment.provider.name,
+                user: appointment.user.name,
+                date: format(
+                    appointment.date,
+                    "'dia' dd 'de' MMMM', as' H:mm'h'",
+                    { locale: pt }
+                )
+            }
         });
 
         return res.json(appointment);
