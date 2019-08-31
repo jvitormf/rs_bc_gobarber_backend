@@ -69,3 +69,6 @@ yarn add @sentry/node@5.6.2
 
 //captura de erros express
 yarn add express-async-errors
+
+//trativa de mensagens de erro
+yarn add youch
