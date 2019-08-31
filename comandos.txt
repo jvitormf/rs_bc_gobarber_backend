@@ -66,3 +66,6 @@ yarn add bee-queue
 
 //gerenciador de erros
 yarn add @sentry/node@5.6.2
+
+//captura de erros express
+yarn add express-async-errors
