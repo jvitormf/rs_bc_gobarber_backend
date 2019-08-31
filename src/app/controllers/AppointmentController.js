@@ -58,11 +58,12 @@ class AppointmentController {
             });
         }
 
-        if(!(provider_id === userId)){
-            return res.status(400).json({
-                eroor: 'You can not create an appointment to your own provider account.'
-            })
-        }
+        // if (!(provider_id !== req.userId)) {
+        //     return res.status(400).json({
+        //         eroor:
+        //             'You can not create an appointment to your own provider account.',
+        //     });
+        // }
 
         const hourStart = startOfHour(parseISO(date));
 
@@ -120,7 +121,7 @@ class AppointmentController {
                     model: User,
                     as: 'user',
                     attributes: ['name'],
-                }
+                },
             ],
         });
 
@@ -154,8 +155,8 @@ class AppointmentController {
                     appointment.date,
                     "'dia' dd 'de' MMMM', as' H:mm'h'",
                     { locale: pt }
-                )
-            }
+                ),
+            },
         });
 
         return res.json(appointment);
