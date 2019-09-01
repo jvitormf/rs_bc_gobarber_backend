@@ -72,3 +72,6 @@ yarn add express-async-errors
 
 //trativa de mensagens de erro
 yarn add youch
+
+//Variaveis ambiente
+yarn add dotenv
