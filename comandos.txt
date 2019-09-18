@@ -75,3 +75,6 @@ yarn add youch
 
 //Variaveis ambiente
 yarn add dotenv
+
+//permite que determinado endereco acesse a api
+yarn add cors
